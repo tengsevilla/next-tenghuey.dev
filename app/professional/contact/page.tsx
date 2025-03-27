@@ -1,8 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
-import { Button } from "@/components/ui/button";
 import { GitHub, LinkedIn } from "@/data/devIcons";
 import { cn } from "@/lib/utils";
+import FormContact from "./FormContact";
 
 export default function Page() {
     return (
@@ -25,28 +25,7 @@ export default function Page() {
                             {/* Right: Form & Contact Card */}
                             <div className="bg-muted p-6 md:p-8 rounded-lg shadow-lg space-y-6">
                                 {/* Form */}
-                                <form className="space-y-4">
-                                    <div className="flex flex-col md:flex-row gap-4">
-                                        <input
-                                            type="email"
-                                            placeholder="Your Email"
-                                            className="w-full border border-border rounded px-4 py-2 bg-background text-foreground"
-                                        />
-                                        <input
-                                            type="text"
-                                            placeholder="Your Name"
-                                            className="w-full border border-border rounded px-4 py-2 bg-background text-foreground"
-                                        />
-                                    </div>
-                                    <textarea
-                                        placeholder="Your Message"
-                                        rows={6}
-                                        className="w-full border border-border rounded px-4 py-2 bg-background text-foreground"
-                                    ></textarea>
-                                    <Button className="w-full bg-primary text-white shadow-lg hover:opacity-100">
-                                        Send Message
-                                    </Button>
-                                </form>
+                                <FormContact />
 
                                 <hr className="border-border" />
 
