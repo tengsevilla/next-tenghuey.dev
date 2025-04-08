@@ -84,11 +84,11 @@ export default function Page() {
             thumbnail: `${baseUrl}/projects/blank.png`,
         },
         {
-            title: "",
-            company: "",
-            description: "",
-            link: "#",
-            thumbnail: `${baseUrl}/projects/blank.png`,
+            title: "Landing Page",
+            company: "Cains Boat Yard",
+            description: "Still under development. A landing page for a boat yard company.",
+            link: "https://www.cairnsboatyard.com.au/home",
+            thumbnail: `${baseUrl}/projects/cainsboat-min.png`,
         },
         {
             title: "Dental Patient Management",
