@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tenghuey.dev/
+
+# Sitemaps
+Sitemap: https://tenghuey.dev/sitemap.xml

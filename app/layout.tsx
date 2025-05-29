@@ -15,11 +15,26 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "tenghuey.dev - Anthony Sevilla",
-  description: "Anthony Sevilla's career portfolio showcasing expertise in web development, frontend, backend, and master data specialization. Also somewhat my personal blog.",
-  keywords: ["tenghuey", "react", "nextjs", "web development", "frontend", "backend", "programming", "master data specialist", "anthony sevilla"],
-  robots: "index, follow",
+  title: "tenghuey.dev | Anthony Sevilla – Full Stack & MDM Developer",
+  description:
+    "Portfolio and blog of Anthony Sevilla, a full stack web developer and master data specialist. Showcasing projects in React, Next.js, backend APIs, and data engineering.",
+  keywords: [
+    "tenghuey",
+    "anthony sevilla",
+    "react developer",
+    "nextjs portfolio",
+    "full stack developer",
+    "web development",
+    "backend engineer",
+    "frontend engineer",
+    "master data management",
+    "MDM specialist",
+    "typescript",
+    "api integration"
+  ],
+  robots: "index, follow"
 };
+
 
 export default function RootLayout({
   children,
