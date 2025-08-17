@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
+@tailwind utilities;
 
 @theme inline {
   --color-background: var(--background);
@@ -126,5 +125,29 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Montserrat', sans-serif;
+  }
+
+  .scrollbar-hide {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Webkit browsers */
+  }
+}
+
+@layer utilities {
+  .animate-blink {
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 }

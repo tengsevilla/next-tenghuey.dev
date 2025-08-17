@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito, Montserrat } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner"
-import { Analytics } from "@vercel/analytics/next"
+import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -15,9 +16,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "tenghuey.dev | Anthony Sevilla – Full Stack & MDM Developer",
+  title: "Anthony Sevilla – Developer",
   description:
-    "Portfolio and blog of Anthony Sevilla, a full stack web developer and master data specialist. Showcasing projects in React, Next.js, backend APIs, and data engineering.",
+    "Portfolio and blog of Anthony Sevilla, a developer. Showcasing projects in React, Next.js, backend APIs, and data engineering.",
   keywords: [
     "tenghuey",
     "anthony sevilla",
@@ -30,11 +31,10 @@ export const metadata: Metadata = {
     "master data management",
     "MDM specialist",
     "typescript",
-    "api integration"
+    "api integration",
   ],
-  robots: "index, follow"
+  robots: "index, follow",
 };
-
 
 export default function RootLayout({
   children,
@@ -43,12 +43,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${nunito.variable} ${montserrat.variable} antialiased`}
-      >
-        {children}
-        <Analytics />
-        <Toaster />
+      <body className={`${nunito.variable} ${montserrat.variable} antialiased`}>
+        <PostHogProvider>
+          {children}
+          <Analytics />
+          <Toaster />
+        </PostHogProvider>
       </body>
     </html>
   );
