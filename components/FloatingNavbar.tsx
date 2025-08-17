@@ -94,6 +94,9 @@ export function FloatingNavbar() {
             <Link
                 href="/"
                 className="text-2xl font-semibold text-black select-none tracking-wide drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]"
+                onClick={() => {
+                    setNav("home");
+                }}
             >
                 tenghuey.dev
             </Link>
@@ -149,6 +152,9 @@ export function FloatingNavbar() {
                                             "w-full text-center rounded-md font-medium text-black transition-colors",
                                             "hover:bg-black hover:text-white py-2 px-4"
                                         )}
+                                        onClick={() => {
+                                            setNav(item.label as "home" | "projects" | "notes" | "about");
+                                        }}
                                     >
                                         {item.label}
                                     </Link>
