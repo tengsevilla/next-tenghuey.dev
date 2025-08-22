@@ -43,24 +43,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* JSON-LD structured data for video */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "VideoObject",
-              name: "Driftcloud Background",
-              description: "A drifting cloud background animation.",
-              thumbnailUrl: "https://tenghuey.dev/driftcloud-thumb.jpg",
-              uploadDate: "2025-08-22",
-              contentUrl: "https://tenghuey.dev/driftcloud.mp4",
-              embedUrl: "https://tenghuey.dev",
-            }),
-          }}
-        />
-      </head>
       <body className={`${nunito.variable} ${montserrat.variable} antialiased`}>
         <PostHogProvider>
           {children}
