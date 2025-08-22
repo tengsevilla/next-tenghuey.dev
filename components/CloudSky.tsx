@@ -15,6 +15,7 @@ export function CloudSky({ className }: VideoBackgroundProps) {
         className,
       )}
       src="/driftcloud.mp4"
+      poster="/driftcloud-thumb.png"
       autoPlay
       loop
       muted
